@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 3</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header>
+		<div class="wrapper">
+			<img class="logo" src="image.png" alt="Logo">
+			<div class="site-name">
+				Задание 3
+			</div>
+		</div>
+	</header>
+ 
+	<main>
+	<nav>
+		<ul id="nav-menu">
+			<li><a href="#1">Ссылка 1</a></li>
+			<li><a href="#2">Ссылка 2</a></li>
+			<li><a href="#3">Ссылка 3</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content">
+		<div class="content-links">
+		<ol>
+			<li><a href="http://example.com">http://example.com</a></li>
+			<li><a href="https://example.com">https://example.com</a></li>
+			<li><a href="ftp://example.com:21/file.txt">file.txt (без авторизации)</a></li>
+			<li><a href="ftp://admin:123@example.com:21/file.txt">file.txt (с авторизацией)</a></li>
+			<li><a href="http://example.com/index#about">about example.com</a></li>
+			<li><a href="#about">about this page</a></li>
+			<li><a href="http://example.com/index.html?from=site.com&action=click">example.com</a></li>
+			<li>
+				<ul>
+					<li><a href="#top" title="Начало страницы">Начало страницы</a></li>
+					<li><a href="#mid" title="Середина страницы">Середина страницы</a></li>
+					<li><a href="#bot" title="Конец страницы">Конец страницы</a></li>
+				</ul>
+			</li>
+			<li><a>ссылка без href</a></li>
+			<li><a href="">ссылка с пустым href</a></li>
+			<li><a href="http://example.com" rel="nofollow">ссылка с запретом перехода поисковикам</a></li>
+			<li><a href="http://example.com" rel="noindex">ссылка с запретом индексации поисковиками</a></li>
+			<li>Есть такой сайт <a href="http://example.com">example.com</a></li>
+			<li><a href="http://example.com"><img src="image.jpg" style="width: 600px;" alt="image"></a></li>
+			<li><map name="links">
+				<area shape="circle" coords="100,100,100" href="http://example.com" alt="image">
+				<area shape="rect" coords="100,200,500,600" href="http://example.com/about" alt="image">
+				</map>
+				<img usemap="#links" src="image.jpg" style="width: 600px;" alt="image">
+			</li>
+			<li><a href="dragons.html">dragons.html</a></li>
+			<li><a href="about/flowers.html">about/flowers.html</a></li>
+			<li><a href="../batterfly.html">../batterfly.html</a></li>
+			<li><a href="../../birds.html">../../birds.html</a></li>
+			<li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+			<li><a href="/about">Сокращенная ссылка на внутреннюю страницу</a></li>
+		</ol>
+		</div>
+		
+		<div class="content-table">
+		<table>
+			<tr>
+				<th>Колонка 1</th>
+				<th>Колонка 2</th>
+				<th>Колонка 3</th>
+			</tr>
+			<tr>
+				<td colspan="2">11, 12</td>
+				<td>13</td>
+			</tr>
+			<tr>
+				<td>21</td>
+				<td>22</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td>31</td>
+				<td>32</td>
+				<td>33</td>
+			</tr>
+			<tr>
+				<td rowspan="2">41, 51</td>
+				<td>42</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td colspan="2">52, 53</td>
+			</tr>
+		</table>
+		</div>
+		
+		<div class="content-form">
+		<form action="/"
+		method="POST">
+	
+			<label>
+			Имя:<br />
+			<input name="name"
+				value="" />
+			</label><br />
+			
+			<label>
+			e-mail:<br />
+			<input name="e-mail"
+				value=""
+				type="email" />
+			</label><br />
+			
+			<label>
+			Дата рождения:<br />
+			<input name="birth-date"
+				value=""
+				type="date" />
+			</label><br />
+	
+			Пол:<br />
+			<label><input type="radio" checked="checked"
+				name="radio-group-gender" value="male" />
+			М</label>
+			<label><input type="radio"
+				name="radio-group-gender" value="female" />
+			Ж</label><br />
+			
+			Количество конечностей:<br />
+			<label><input type="radio"
+				name="body-part-val" value="1" />
+			1</label>
+			<label><input type="radio"
+				name="body-part-val" value="2" />
+			2</label>
+			<label><input type="radio"
+				name="body-part-val" value="3" />
+			3</label>
+			<label><input type="radio" checked="checked"
+				name="body-part-val" value="4" />
+			4</label>
+			<label><input type="radio"
+				name="body-part-val" value="5" />
+			5+</label><br />
+	
+	
+			<label>
+			Сверхспособности:
+			<br />
+				<select name="field-abilities[]"
+					multiple="multiple">
+					<option value="immortality">бессмертие</option>
+					<option value="wall-through">прохождение сквозь стены</option>
+					<option value="levitation">левитация</option>
+				</select>
+			</label><br />
+	
+			<label>
+				Биография:<br />
+				<textarea name="bio"></textarea>
+			</label><br />
+		
+			С контрактом ознакомлен (а):<br />
+			<label><input type="checkbox"
+				name="check-eula" />
+			</label><br />
+		
+			<input type="submit" value="Отправить" />
+		</form>
+		</div>
+	</div>
+	</main>
+	<footer>
+		(c) Даниил Кетов 2021
+	</footer>
+</body>
+</html>
+ 
