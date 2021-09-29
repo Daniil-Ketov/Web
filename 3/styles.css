@@ -3,6 +3,7 @@ header {
 }
 
 .wrapper {
+	max-width: 960px;
 	height: 120px;
 	margin: 0 auto;
 	background-color: #9999FF;
@@ -22,10 +23,11 @@ header {
 
 main {
 	margin: 0 auto;
+	max-width: 960px;
 }
 
 .content {
-	max-width: 1080px;
+	max-width: 960px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction:column;
@@ -73,7 +75,7 @@ footer {
 	padding: 0 0 0 30px;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 800px) {
 	.content-links {
 		order: 0;
 	}
