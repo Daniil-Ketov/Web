@@ -71,8 +71,6 @@ tr:nth-child(even) {
 
 footer {
 	width: 100%;
-	margin: 10px auto;
-	padding: 0 0 0 30px;
 }
 
 @media screen and (max-width: 1080px) {
