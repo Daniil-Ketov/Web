@@ -75,7 +75,7 @@ footer {
 	padding: 0 0 0 30px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1080px) {
 	.content-links {
 		order: 0;
 	}
