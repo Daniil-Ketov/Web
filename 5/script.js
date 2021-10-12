@@ -12,7 +12,7 @@ function calculate() {
     else if (price[0].value.match(/[.,]/) != null || count[0].value.match(/[.,]/) != null) {
         alert("Вводите целые числа");
     }
-    else if (price[0].value.match(/\d/) == null || count[0].value.match(/\d/) == null) {
+    else if (price[0].value.match(/^\d/) != null || count[0].value.match(/^\d/) != null) {
         alert("Вводите числа");
     }
     else {
