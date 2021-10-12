@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="script.js"></script>
+	<title>Задание 5</title>
+</head>
+
+<body style="margin: 0; display: flex; flex-direction: column; min-height: 100vh;">
+	<header>
+		<h1 style="text-align: center;">Задание 5</h1>
+	</header>
+ 
+	<main style="flex-grow: 1; max-width: 600px; margin: 0 auto;">
+		<h2 style="text-align: center;">Калькулятор стоимости заказа</h2>
+		<form style="display: flex; flex-direction: column;">
+			<input name="price" type="text" placeholder="Стоимость единицы товара">
+			<input name="count" type="text" placeholder="Количество единиц товара">
+			<button onclick="return calculate();">Подсчет стоимости</button>
+			<div id="result"></div>
+		</form>
+	</main>
+
+	<footer style="flex-shrink: 0;">
+		(c) Даниил Кетов 2021
+	</footer>
+</body>
+</html>
+ 
