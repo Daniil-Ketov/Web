@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function (event) {
     let o = document.getElementsByName("options");
     let delivery;
+    let package;
     o[0].addEventListener("change", function(event) {
         let deliveries = document.getElementById("deliveries");
         let package = document.getElementById("package");
@@ -19,8 +20,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
         else if (options.value == "3") {
             deliveries.style.display = "none";
             package.style.display = "flex";
-            package.checked = false;
-            calculateAddons(false);
+            calculateAddons(package.checked);
         }
     });
 
@@ -38,6 +38,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     p.addEventListener("change", function (event) {
         let p = event.target;
         console.log(p.checked);
+        package = p.checked;
         calculateAddons(p.checked);
     });
     
@@ -45,7 +46,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
     c.addEventListener("change", function (event) {
         let c = event.target;
         console.log(c.value);
-        calculateAddons(delivery);
+        if (document.getElementsByName("options")[0].value == "2") {
+            calculateAddons(delivery);
+        }
+        else if (document.getElementsByName("options")[0].value == "3") {
+            calculateAddons(package);
+        }
     })
 });
 
