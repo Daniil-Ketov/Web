@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="script.js"></script>
+	<title>Задание 6</title>
+</head>
+
+<body style="margin: 0; display: flex; flex-direction: column; min-height: 100vh;">
+	<header>
+		<h1 style="text-align: center;">Задание 6</h1>
+	</header>
+ 
+	<main style="flex-grow: 1; max-width: 600px; margin: 0 auto;">
+		<form style="display: flex; flex-direction: column;" onsubmit="return false;" autocomplete="off">
+			<h2 style="text-align: center;">Калькулятор стоимости заказа</h2>
+			<input name="price" type="text" placeholder="Стоимость единицы товара">
+			<input name="count1" type="text" placeholder="Количество единиц товара">
+			<button onclick="return calculate();">Подсчет стоимости</button>
+			<div id="result1">Введите стоимость товара</div>
+			<h2 style="text-align: center;">Калькулятор стоимости заказа дополнительного товара</h2>
+			<input id="count2" type="text" placeholder="Количество единиц дополнительного товара">
+            <select name="options">
+                <option value="1">Опция 1</option>
+                <option value="2">Опция 2</option>
+                <option value="3">Опция 3</option>
+            </select>
+            <div class="deliveries" id="deliveries" style="display: none;">
+                <label><input type="radio" name="delivery" id="deliv1" value="d1">Стандартная доставка</label>
+                <label><input type="radio" name="delivery" id="deliv2" value="d2">Быстрая доставка</label>
+                <label><input type="radio" name="delivery" id="deliv3" value="d3">Доставка премиум+</label>
+            </div>
+            <label id="package" style="display: none;"><input type="checkbox">Упаковка премиум класса</label>
+			<div id="result2">Выберите опцию</div>
+		</form>
+	</main>
+
+	<footer style="flex-shrink: 0;">
+		(c) Даниил Кетов 2021
+	</footer>
+</body>
+</html>
+ 
