@@ -16,10 +16,10 @@
  
 	<main style="flex-grow: 1; max-width: 600px; margin: 0 auto;">
 		<h2 style="text-align: center;">Калькулятор стоимости заказа</h2>
-		<form style="display: flex; flex-direction: column;">
+		<form style="display: flex; flex-direction: column;" autocomplete="off">
 			<input name="price" type="text" placeholder="Стоимость единицы товара">
 			<input name="count" type="text" placeholder="Количество единиц товара">
-			<button onclick="return calculate();">Подсчет стоимости</button>
+			<button id="calcButton">Подсчет стоимости</button>
 			<div id="result"></div>
 		</form>
 	</main>
