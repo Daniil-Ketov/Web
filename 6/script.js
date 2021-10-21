@@ -70,7 +70,7 @@ function calculate() {
         alert("Вводите числа");
     } else {
         const result = Number(price[0].value) * Number(count[0].value);
-        let out = "Стоимость покупки: " + result + " денежных единиц";
+        const out = "Стоимость покупки: " + result + " денежных единиц";
         document.getElementById("result1").innerHTML = out;
     }
     return false;
@@ -105,7 +105,7 @@ function calculateAddons(changedVal) {
                 result = Number(count.value) * 2000;
             }
         }
-        let out = "Стоимость покупки: " + result + " денежных единиц";
+        const out = "Стоимость покупки: " + result + " денежных единиц";
         document.getElementById("result2").innerHTML = out;
     }
     return false;
