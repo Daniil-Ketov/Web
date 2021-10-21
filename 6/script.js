@@ -44,7 +44,9 @@ window.addEventListener("DOMContentLoaded", function () {
     c.addEventListener("change", function (event) {
         c = event.target;
         console.log(c.value);
-        if (document.getElementsByName("options")[0].value === "2") {
+        if (document.getElementsByName("options")[0].value === "1") {
+            calculateAddons();
+        } else if (document.getElementsByName("options")[0].value === "2") {
             calculateAddons(delivery);
         } else if (document.getElementsByName("options")[0].value === "3") {
             calculateAddons(pack);
