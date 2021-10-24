@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     $(".gallery").slick({
         dots: true,
         mobileFirst: true,
