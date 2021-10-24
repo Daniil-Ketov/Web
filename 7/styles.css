@@ -20,12 +20,20 @@ main {
     padding: 10px 0 0 0;
 }
 
+img {
+    max-width: 200px;
+}
+
 footer {
+    background-color: whitesmoke;
     flex-shrink: 0;
 }
 
 @media screen and (max-width: 960px) {
     main {
-        max-width: 420px;
+        max-width: 280px;
+    }
+    img {
+        max-width: 120px;
     }
 }
