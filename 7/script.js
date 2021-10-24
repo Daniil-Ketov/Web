@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $(".gallery").slick({
         dots: true,
         mobileFirst: true,
@@ -14,5 +14,4 @@ $(document).ready(function() {
         slidesToScroll: 2,
         slidesToShow: 2
     });
-}); 
-  
+});
