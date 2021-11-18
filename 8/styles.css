@@ -32,7 +32,7 @@ footer {
 
 @media screen and (max-width: 560px) {
     #feedback {
-        max-width: 280px;
+        max-width: 260px;
         height: 450px;
     }
 }
