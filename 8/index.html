@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script defer src="script.js"></script>
+	<title>Задание 8</title>
+</head>
+
+<body>
+	<header>
+		<h1 style="text-align: center;">Задание 8</h1>
+	</header>
+ 
+	<main>
+		<button id="showForm">Отзыв</button>
+		<form method="POST" id="feedback" onsubmit="return false;">
+			<div>
+				<p>Имя:</p>
+				<input type="text" name="name" id="name" required>
+			</div>
+			<div>
+				<p>e-mail:</p>
+				<input type="email" name="email" id="email" required>
+			</div>
+			<div>
+				<p>Отзыв:</p>
+				<textarea name="message" id="msg" cols="45" rows="8" required></textarea>
+			</div>
+			<div>
+				<input type="checkbox" name="agree" id="agree" required>
+				Согласие с политикой обработки персональных данных
+			</div>
+			<input type="submit" id="send">
+		</form>
+	</main>
+
+	<footer>
+		(c) Даниил Кетов 2021
+	</footer>
+</body>
+</html>
+ 
