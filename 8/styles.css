@@ -34,5 +34,6 @@ footer {
     #feedback {
         max-width: 260px;
         height: 450px;
+        padding: 10px;
     }
 }
