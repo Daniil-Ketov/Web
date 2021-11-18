@@ -24,17 +24,15 @@ window.addEventListener("DOMContentLoaded", function () {
             email: s.email.value,
             message: s.message.value
         };
-        let response = fetch("https://api.slapform.com/lNSMnPeWW", {
+        fetch("https://api.slapform.com/lNSMnPeWW", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json;charset=utf-8"
-            },
             body: JSON.stringify(data)
+        })
+        .then(function (response) {
+            console.log("ok!", response);
+        })
+        .catch(function (response) {
+            console.log("fail!", response);
         });
-
-        if (response.ok) {
-            let result = response.json();
-            alert(result.message);
-        }
     });
 });
