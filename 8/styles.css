@@ -14,8 +14,8 @@ main {
 
 #feedback {
     display: none;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     padding: 30px;
     background-color: wheat;
     border: burlywood;
