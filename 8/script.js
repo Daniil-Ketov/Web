@@ -19,6 +19,7 @@ window.addEventListener("DOMContentLoaded", function () {
             email: s.email.value,
             message: s.message.value
         };
+        document.getElementById("send").style.display = "none";
         fetch("https://api.slapform.com/lNSMnPeWW", {
             method: "POST",
             body: JSON.stringify(data)
@@ -30,6 +31,7 @@ window.addEventListener("DOMContentLoaded", function () {
             alert("fail!", response);
         })
         .finally(function () {
+            document.getElementById("send").style.display = "flex";
             hideForm();
         });
     });
