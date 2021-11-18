@@ -2,19 +2,14 @@ window.addEventListener("DOMContentLoaded", function () {
     let b = document.getElementById("showForm");
     b.addEventListener("click", function () {
         history.pushState({page: 1}, "", "?feedback");
-        document.getElementById("feedback").style.display = "flex";
-        document.getElementById("feedback").style.flexDirection = "column";
-        document.getElementById("showForm").style.display = "none";
+        showForm();
     });
     window.addEventListener("popstate", function (event) {
         if (JSON.stringify(event.state) === "{\"page\":1}") {
-            document.getElementById("feedback").style.display = "flex";
-            document.getElementById("feedback").style.flexDirection = "column";
-            document.getElementById("showForm").style.display = "none";
+            showForm();
         }
         else {
-            document.getElementById("feedback").style.display = "none";
-            document.getElementById("showForm").style.display = "block";
+            hideForm();
         }
     });
     let s = document.getElementById("feedback");
@@ -29,10 +24,26 @@ window.addEventListener("DOMContentLoaded", function () {
             body: JSON.stringify(data)
         })
         .then(function (response) {
-            console.log("ok!", response);
+            alert("ok!", response);
         })
         .catch(function (response) {
-            console.log("fail!", response);
+            alert("fail!", response);
+        })
+        .finally(function () {
+            hideForm();
         });
     });
 });
+
+function showForm () {
+    document.getElementById("feedback").style.display = "flex";
+    document.getElementById("feedback").style.flexDirection = "column";
+    document.getElementById("showForm").style.display = "none";
+    return false;
+}
+
+function hideForm () {
+    document.getElementById("feedback").style.display = "none";
+    document.getElementById("showForm").style.display = "block";
+    return false;
+}
