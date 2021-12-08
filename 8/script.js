@@ -44,6 +44,7 @@ window.addEventListener("DOMContentLoaded", function () {
             window.localStorage.setItem("name", "");
             window.localStorage.setItem("email", "");
             window.localStorage.setItem("message", "");
+            setFields();
         });
     });
 });
