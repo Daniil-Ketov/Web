@@ -6,8 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("popstate", function (event) {
         if (JSON.stringify(event.state) === "{\"page\":1}") {
             showForm();
-        }
-        else {
+        } else {
             hideForm();
         }
     });
@@ -20,22 +19,19 @@ window.addEventListener("DOMContentLoaded", function () {
     });
     s.addEventListener("submit", function () {
         let data = {
-            name: s.name.value,
             email: s.email.value,
-            message: s.message.value
+            message: s.message.value,
+            name: s.name.value
         };
         document.getElementById("send").style.display = "none";
         fetch("https://api.slapform.com/lNSMnPeWW", {
-            method: "POST",
-            body: JSON.stringify(data)
-        })
-        .then(function (response) {
+            body: JSON.stringify(data),
+            method: "POST"
+        }).then(function (response) {
             alert("ok!", response);
-        })
-        .catch(function (response) {
+        }).catch(function (response) {
             alert("fail!", response);
-        })
-        .finally(function () {
+        }).finally(function () {
             window.localStorage.setItem("name", "");
             window.localStorage.setItem("email", "");
             window.localStorage.setItem("message", "");
@@ -47,7 +43,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function showForm () {
+function showForm() {
     let f = document.getElementById("feedback");
     f.style.display = "flex";
     f.style.flexDirection = "row";
@@ -56,14 +52,14 @@ function showForm () {
     return false;
 }
 
-function hideForm () {
+function hideForm() {
     document.getElementById("feedback").style.display = "none";
     document.getElementById("showForm").style.display = "block";
-    window.history.replaceState({page:0}, "", "index.html");
+    window.history.replaceState({page: 0}, "", "index.html");
     return false;
 }
 
-function setFields () {
+function setFields() {
     let f = document.getElementById("feedback");
     f.name.value = window.localStorage.getItem("name");
     f.email.value = window.localStorage.getItem("email");
