@@ -1,9 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
     let b1 = document.getElementById("showForm");
-    b1.addEventListener("click", function () {
-        history.pushState({page: 1}, "", "?feedback");
-        showForm();
-    });
+    b1.addEventListener("click", showForm);
     let b2 = document.getElementById("hideForm");
     b2.addEventListener("click", hideForm);
     window.addEventListener("popstate", function (event) {
@@ -19,6 +16,7 @@ window.addEventListener("DOMContentLoaded", function () {
         window.localStorage.setItem("name", s.name.value);
         window.localStorage.setItem("email", s.email.value);
         window.localStorage.setItem("message", s.message.value);
+        window.localStorage.setItem("agree", s.agree.checked);
     });
     s.addEventListener("submit", function () {
         let data = {
@@ -41,6 +39,7 @@ window.addEventListener("DOMContentLoaded", function () {
             window.localStorage.setItem("name", "");
             window.localStorage.setItem("email", "");
             window.localStorage.setItem("message", "");
+            window.localStorage.setItem("agree", "");
             document.getElementById("send").style.display = "flex";
             setFields();
             hideForm();
@@ -52,15 +51,15 @@ function showForm () {
     let f = document.getElementById("feedback");
     f.style.display = "flex";
     f.style.flexDirection = "row";
-    setFields();
     document.getElementById("showForm").style.display = "none";
+    history.pushState({page: 1}, "", "?feedback");
     return false;
 }
 
 function hideForm () {
     document.getElementById("feedback").style.display = "none";
     document.getElementById("showForm").style.display = "block";
-    window.history.back();
+    window.history.replaceState({page:0}, "", "index.html");
     return false;
 }
 
@@ -69,4 +68,5 @@ function setFields () {
     f.name.value = window.localStorage.getItem("name");
     f.email.value = window.localStorage.getItem("email");
     f.message.value = window.localStorage.getItem("message");
+    f.agree.checked = window.localStorage.getItem("agree");
 }
