@@ -2,7 +2,6 @@ window.addEventListener("DOMContentLoaded", function () {
     let b1 = document.getElementById("showForm");
     b1.addEventListener("click", function () {
         history.pushState({page: 1}, "", "?feedback");
-        setFields();
         showForm();
     });
     let b2 = document.getElementById("hideForm");
@@ -39,12 +38,12 @@ window.addEventListener("DOMContentLoaded", function () {
             alert("fail!", response);
         })
         .finally(function () {
-            document.getElementById("send").style.display = "flex";
-            hideForm();
             window.localStorage.setItem("name", "");
             window.localStorage.setItem("email", "");
             window.localStorage.setItem("message", "");
+            document.getElementById("send").style.display = "flex";
             setFields();
+            hideForm();
         });
     });
 });
@@ -53,9 +52,7 @@ function showForm () {
     let f = document.getElementById("feedback");
     f.style.display = "flex";
     f.style.flexDirection = "row";
-    f.name = window.localStorage.getItem("name");
-    f.email = window.localStorage.getItem("email");
-    f.message = window.localStorage.getItem("message");
+    setFields();
     document.getElementById("showForm").style.display = "none";
     return false;
 }
