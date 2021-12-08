@@ -42,4 +42,7 @@ footer {
         padding: 10px;
         box-sizing: border-box;
     }
+    textarea {
+        width: auto;
+    }
 }
