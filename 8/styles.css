@@ -37,7 +37,7 @@ footer {
 
 @media screen and (max-width: 560px) {
     #feedback {
-        max-width: 300px;
+        width: auto;
         height: 450px;
         padding: 10px;
         box-sizing: border-box;
