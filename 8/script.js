@@ -66,7 +66,7 @@ function hideForm () {
 
 function setFields () {
     let f = document.getElementById("feedback");
-    f.name = window.localStorage.getItem("name");
-    f.email = window.localStorage.getItem("email");
-    f.message = window.localStorage.getItem("message");
+    f.name.value = window.localStorage.getItem("name");
+    f.email.value = window.localStorage.getItem("email");
+    f.message.value = window.localStorage.getItem("message");
 }
