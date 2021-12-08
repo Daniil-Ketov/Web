@@ -37,12 +37,12 @@ footer {
 
 @media screen and (max-width: 560px) {
     #feedback {
-        width: auto;
+        width: 100vw;
         height: 450px;
         padding: 10px;
         box-sizing: border-box;
     }
     textarea {
-        width: auto;
+        width: 80vw;
     }
 }
